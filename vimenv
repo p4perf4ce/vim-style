@@ -1,0 +1,25 @@
+call plug#begin('~/.vim/plugged')
+
+" --- Plug goes here ---
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'preservim/nerdtree'
+
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+
+" --- Plug end here ---
+
+call plug#end()
+
