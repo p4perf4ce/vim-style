@@ -1,6 +1,6 @@
 # VIM ENVIRONMENT
 
-Just my vim setting.
+Just my vim setting with curated plugins. Minimalized.
 
 
 ## PREREQUISITE
