@@ -17,8 +17,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
 Plug 'junegunn/vim-easy-align'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -38,13 +38,6 @@ call plug#end()
 
 filetype plugin indent on	" req
 
-try
-	colorscheme vim-monokai-tasty
-	let g:airline_theme='monokai_tasty'
-catch
-	echo "Colorscheme not installed"
-endtry
-
 " MACROS
 
 " Split Navigation
@@ -52,6 +45,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" RAGE QUIT
+nnoremap <C-S>asdf :qall<CR>
+
 
 " Multi-Cursor
 let g:multi_cursor_use_default_mapping=0
@@ -68,6 +65,23 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 " Backspace
 set backspace=indent,eol,start
+
+" Special character setting.
+"set lcs+=tab:»\ 
+"set lcs+=eol:¬
+"set lcs+=space:·
+set lcs+=tab:>\ 
+set lcs+=space:·
+set lcs+=trail:·
+set lcs+=eol:¬
+" Uncomment to toggle special key visibility.
+set list
+
+let g:vim_monokai_tasty_italic = 1
+colorscheme vim-monokai-tasty
+let g:airline_theme='monokai_tasty'
+
+hi SpecialKey ctermfg=238 ctermbg=235
 
 " -------- Python setup begin -----------
 " Enable Folding
